@@ -1,0 +1,3 @@
+rootProject.name = 'Gitlab2'
+
+include "main", "test"

@@ -33,7 +33,7 @@ task reports(dependsOn: ['test', 'javadoc']) {
 test.ignoreFailures=true
 }
 
-deployReports (dependsOn: ['reports']){
+task deployReports (dependsOn: ['reports']){
 check.dependsOn reports, javadoc
 }
 

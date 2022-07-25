@@ -29,11 +29,11 @@ test {
     useJUnitPlatform()
 }
 
-tasks :reports(dependsOn: ['test', 'javadoc']) {
+tasks reports(dependsOn: ['test', 'javadoc']) {
 test.ignoreFailures=true
 }
 
-tasks :deployReports (dependsOn: ['reports']){
+tasks deployReports (dependsOn: ['reports']){
 check.dependsOn reports, javadoc
 }
 

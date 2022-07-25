@@ -37,4 +37,9 @@ task deployReports (dependsOn: ['reports']){
 check.dependsOn reports, javadoc
 }
 
+task copyResources (type: Copy){
+    from(branch('main/build/docs'))
+    into(branch('gh-pages/build/reports'))
+}
+
 
